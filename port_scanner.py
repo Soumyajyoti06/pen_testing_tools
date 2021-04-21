@@ -2,10 +2,11 @@ import pyfiglet
 import sys
 import socket
 from datetime import datetime
+from printy import printy
 
 ascii_banner = pyfiglet.figlet_format("PORT SCANNER by Subhodeep Moitra")
-print(ascii_banner)
-print ("The program is written for research purposes. \nFor any type of misusage of this program the author is not responsible...\n ")
+printy(ascii_banner,"rBU")
+printy ("The program is written for research purposes. \nFor any type of misusage of this program the author is not responsible...\n ", "rBU")
 
 target = input ("Enter the target host: ")
 
@@ -19,6 +20,7 @@ else:
 
 # Add Banner
 print("-" * 50)
+print(f'The {target} IP ADDRESS is {socket.gethostbyname(target)}')
 print("Scanning Target: " + target)
 print("Scanning started at:" + str(datetime.now()))
 print("-" * 50)
